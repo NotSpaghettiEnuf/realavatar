@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script type="module">
+    import { Configuration, StreamingAvatarApi } from 'streaming-avatar';
+
+    const streamingAvatar = new StreamingAvatarApi(
+      new Configuration({ accessToken: 'ZGNjOGQxMDVhMzRhNGExZjgxZWM1NzgwOTRmZmJlYmMtMTcxNzE4Nzg3MA==' })
+    );
+
+    async function main() {
+      await streamingAvatar.createStartAvatar({
+        newSessionRequest: {
+          quality: "low",
+          avatarName: 'avatarId',
+          voice: { voiceId: 'voiceId' }
+        }
+      });
+    }
+
+    main();
+  </script>
+</head>
+<body>
+</body>
+</html>
